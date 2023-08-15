@@ -1,4 +1,4 @@
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
 import HomePage from "./pages/HomePage.jsx";
 import Product from "./pages/Product.jsx";
 import Pricing from "./pages/Pricing.jsx";
@@ -47,7 +47,7 @@ export default function App() {
                 <Route path={"product"} element={<Product/>}/>
                 <Route path={"pricing"} element={<Pricing/>}/>
                 <Route path={"app"} element={<AppLayout/>}>
-                    <Route index element={citiesElement}/>
+                    <Route index element={<Navigate replace to={"cities"} />}/>
                     <Route path={"cities"} element={citiesElement}/>
                     <Route path={"cities/:id"} element={<City/>}/>
                     <Route path={"countries"} element={<CountryList isLoading={isLoading} cities={cities}/>}/>
