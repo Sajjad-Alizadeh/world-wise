@@ -2,8 +2,11 @@ import Spinner from "./Spinner.jsx";
 import Message from "./Message.jsx";
 import styles from "./CountryList.module.css";
 import CountryItem from "./CountryItem.jsx";
+import {useCitiesContext} from "../contexts/CitiesProvider.jsx";
 
-export default function CountryList({cities, isLoading}) {
+export default function CountryList() {
+    const {cities, isLoading} = useCitiesContext()
+
 
     if (isLoading) {
         return (
@@ -25,7 +28,6 @@ export default function CountryList({cities, isLoading}) {
             return arr
         }
     }, [])
-    console.log(country)
 
     return (
         <ul className={styles.countryList}>
