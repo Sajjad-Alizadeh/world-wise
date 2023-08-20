@@ -11,7 +11,12 @@ const formatDate = (date) =>
 export default function CityItem({city}) {
     const {emoji, cityName, date, id, position} = city
     const {lat, lng} = position
-    const {currentCity} = useCitiesContext()
+    const {currentCity, deleteCity} = useCitiesContext()
+
+    function handleDeleteBtn(e) {
+        e.preventDefault()
+        deleteCity(id)
+    }
     return (
         <li>
             <Link to={`${id}?lat=${lat}&lng=${lng}`}
@@ -21,7 +26,7 @@ export default function CityItem({city}) {
                 <time className={styles.date}>
                     ({formatDate(date)})
                 </time>
-                <button className={styles.deleteBtn}>
+                <button className={styles.deleteBtn} onClick={handleDeleteBtn}>
                     &times;
                 </button>
             </Link>
