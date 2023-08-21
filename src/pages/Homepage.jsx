@@ -19,7 +19,7 @@ export default function Homepage() {
                     of. Never forget your wonderful experiences, and show your friends how
                     you have wandered the world.
                 </h2>
-                <Link to={routes.APP} className={"cta"}>
+                <Link to={routes.LOGIN} className={"cta"}>
                     Start Tracking now
                 </Link>
             </section>
