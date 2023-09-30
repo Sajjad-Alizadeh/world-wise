@@ -13,7 +13,7 @@ import SpinnerFullPage from "./components/SpinnerFullPage.jsx";
 
 const Product = lazy(() => import("./pages/Product.jsx"))
 const Pricing = lazy(() => import("./pages/Pricing.jsx"))
-const HomePage = lazy(() => import("./pages/HomePage.jsx"))
+const HomePage = lazy(() => import("./pages/Homepage.jsx"))
 const Login = lazy(() => import("./pages/Login.jsx"))
 const AppLayout = lazy(() => import("./pages/AppLayout.jsx"))
 const PageNotFound = lazy(() => import("./pages/PageNotFound.jsx"))
